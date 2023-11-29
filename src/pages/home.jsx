@@ -1,11 +1,11 @@
 // import { useState } from 'react'
-import "./App.css";
-import Carousel from "./components/Carousel/Carousel";
-import Footer from "./components/Footer/Footer";
-import Navbar from "./components/Navbar/Navbar";
-import CardProduct from "./components/ProductCard/ProductCard";
 
-function App() {
+import Carousel from "../components/Carousel/Carousel";
+import Footer from "../components/Footer/Footer";
+import Navbar from "../components/Navbar/Navbar";
+import CardProduct from "../components/ProductCard/ProductCard";
+
+export default function Home() {
   // const [count, setCount] = useState(0)
 
   return (
@@ -25,4 +25,4 @@ function App() {
   );
 }
 
-export default App;
+
