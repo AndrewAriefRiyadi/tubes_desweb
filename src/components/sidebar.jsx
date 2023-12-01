@@ -3,28 +3,20 @@ import React from "react";
 import { Link } from "react-router-dom";
 
 export default function Sidebar() {
-    return( 
-        <div className="w-2/12 bg-white text-black p-4 flex flex-col">
+    return(
+        
+        <div className="md:w-2/12 items-center max-md:self-center gap-2 bg-white flex md:flex-col pt-4 md:p-4">
             <Link to="#">
-                <h1 className="font-bold text-2xl">KATEGORI</h1>
+                <h1 className="font-bold md:text-2xl">Kategori</h1>
             </Link>
             <Link to="#">
-                <h1 className="font-bold text-2xl">KATEGORI</h1>
+                <h1 className="font-bold md:text-2xl">Kategori</h1>
             </Link>
             <Link to="#">
-                <h1 className="font-bold text-2xl">KATEGORI</h1>
+                <h1 className="font-bold md:text-2xl">Kategori</h1>
             </Link>
             <Link to="#">
-                <h1 className="font-bold text-2xl">KATEGORI</h1>
-            </Link>
-            <Link to="#">
-                <h1 className="font-bold text-2xl">KATEGORI</h1>
-            </Link>
-            <Link to="#">
-                <h1 className="font-bold text-2xl">KATEGORI</h1>
-            </Link>
-            <Link to="#">
-                <h1 className="font-bold text-2xl">KATEGORI</h1>
+                <h1 className="font-bold md:text-2xl">Kategori</h1>
             </Link>
         </div>
     );

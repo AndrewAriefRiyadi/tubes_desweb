@@ -2,9 +2,7 @@
 // eslint-disable-next-line no-unused-vars
 import React from "react";
 
-const CardProduct = (props) =>{
-
-
+export default function ProductCard(props){
     return (
       <div className="relative m-5 flex w-2/12 max-w-xs flex-col overflow-hidden rounded-lg border border-gray-100 bg-white shadow-md">
         <a
@@ -41,4 +39,3 @@ const CardProduct = (props) =>{
     );
 }
 
-export default CardProduct;

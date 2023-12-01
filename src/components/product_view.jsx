@@ -2,16 +2,17 @@
 import React from "react";
 import Sidebar from "./sidebar";
 import Product_deskripsi from "./product_deskripsi";
+import Rekomendasi from "./rekomendasi";
 
 export default function ProductView() {
     return (
-        <section class="flex h-auto mx-80">
+        <section class="flex flex-col md:flex-row h-full w-auto">
         <Sidebar />
-        <div class="w-10/12 flex-col p-4">
+        <div class="md:w-10/12 flex-col p-4">
             <p>lklfjgdkflgj / dldkcgjlfdsk / ldkfjgdlf / dklfgj</p>
-            <label class="flex gap-4 mt-4">
-                <div class="w-1/2 flex-col h-auto">
-                    <div class="w-full h-96 bg-gray-300 shadow-md p-4">
+            <label class="flex flex-col md:flex-row w-auto gap-4 mt-4">
+                <div class="md:w-1/2 flex-col h-auto">
+                    <div class="w-auto h-96 md:h-[] lg: bg-gray-300 shadow-md p-4">
                     </div>
                     <div class="flex gap-2">
                         <div class="w-1/3 h-48 bg-gray-500 shadow-md my-2">
@@ -22,7 +23,7 @@ export default function ProductView() {
                         </div>
                     </div>
                 </div>
-                <div class="w-1/2 flex-col h-auto">
+                <div class="md:w-1/2 flex-col h-auto">
                     <p>*****</p>
                     <div className="flex justify-between">
                         <h1>Nama Barang</h1>
@@ -69,6 +70,9 @@ export default function ProductView() {
             </label>
             <div>
             <Product_deskripsi/>
+            </div>
+            <div>
+            <Rekomendasi/>
             </div>
             
         </div>
