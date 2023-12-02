@@ -3,6 +3,7 @@ import React from "react";
 import Sidebar from "./sidebar";
 import Product_deskripsi from "./product_deskripsi";
 import Rekomendasi from "./rekomendasi";
+import Review from "./review";
 
 export default function ProductView() {
     return (
@@ -71,6 +72,9 @@ export default function ProductView() {
             <div>
             <Product_deskripsi/>
             </div>
+            <div>
+            <Review/>
+            </div> 
             <div>
             <Rekomendasi/>
             </div>
