@@ -9,7 +9,7 @@ const ListNavbar = () => {
       <ContenList title="Kids" link="/"/>
       <ContenList title="Accessories" link="/"/>
       <ContenList title="Collections" link="/"/>
-      <ContenList title="Sale" link="/"/>  
+      <ContenList title="Sale" link="/product"/>  
       </ul>
     );
 }

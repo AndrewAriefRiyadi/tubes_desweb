@@ -1,18 +1,18 @@
 // import { useState } from 'react'
 
+
 import Footer from "../components/Footer/Footer";
 import Navbar from "../components/Navbar/Navbar";
-import ProductView from "../components/product_view";
-import { useParams } from "react-router";
+import Cart from "../components/cart";
 
 export default function Product() {
-    let params = useParams();
-    console.log(params.id); 
+  // const [count, setCount] = useState(0)
+
     return (
         <>
         <Navbar />
-        <ProductView productId={params.id}/>
-        <Footer />
+        <Cart/>
+        <Footer/>
         </>
     );
 }

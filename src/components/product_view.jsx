@@ -3,14 +3,32 @@ import React from "react";
 import Sidebar from "./sidebar";
 import Product_deskripsi from "./product_deskripsi";
 import Rekomendasi from "./rekomendasi";
+import Review from "./review";
 
-const data = {
-    nama: "Straight Low Jeans",
-    harga: "199.000",
-    image: "./src/assets/product_view.png",
-}
+const data = [
+    {
+        nama: "Straight Low Jeans",
+        harga: "199.000",
+        image: "../src/assets/product_view.png",
+    },
+    {
+        nama: "Straight Cargo",
+        harga: "199.000",
+        image: "../src/assets/product_view.png",
+    },
+    {
+        nama: "Straight Jacket",
+        harga: "199.000",
+        image: "../src/assets/product_view.png",
+    },
+    {
+        nama: "Straight Low Jeans",
+        harga: "199.000",
+        image: "../src/assets/product_view.png",
+    },
+]
 
-export default function ProductView() {
+export default function ProductView({productId}) {
     return (
         <section class="flex flex-col md:flex-row h-full w-auto">
         <Sidebar />
@@ -18,20 +36,20 @@ export default function ProductView() {
             <p>lklfjgdkflgj / dldkcgjlfdsk / ldkfjgdlf / dklfgj</p>
             <label class="flex flex-col md:flex-row w-auto gap-4 mt-4 ">
                 <div class="md:w-1/2 flex justify-center">
-                    <img className="" src={data.image}></img>
+                    <img className="w-fit" src={data[productId].image}></img>
                 </div>
                 <div class="flex flex-col h-auto justify-between md:w-1/2 max-md:gap-3 md:mr-4">
                     <div>
-                        <img className=" w-fit" src=".\src\assets\stars.png"></img>
+                        <img className=" w-fit" src="..\src\assets\stars.png"></img>
                         <div className="flex justify-between">
-                            <h1 className=" font-bold text-xl">{data.nama}</h1>
+                            <h1 className=" font-bold text-xl">{data[productId].nama}</h1>
                             <div className="flex gap-2">
-                                <img className=" w-fit" src=".\src\assets\heart.png"></img>
-                                <img className=" w-fit" src=".\src\assets\share.png"></img>
+                                <img className=" w-fit" src="..\src\assets\heart.png"></img>
+                                <img className=" w-fit" src="..\src\assets\share.png"></img>
                             </div>
                         </div>
                     </div>
-                    <p className=" font-bold text-xl">{data.harga}</p>
+                    <p className=" font-bold text-xl">{data[productId].harga}</p>
                     <div>
                         <p className="">Warna</p>
                         <div className="flex gap-2">
@@ -53,11 +71,11 @@ export default function ProductView() {
                     </div>
                     <div className="flex flex-col gap-2">
                         <div className="flex gap-3">
-                            <img className=" w-fit" src=".\src\assets\pengiriman.png"></img>
+                            <img className=" w-fit" src="..\src\assets\pengiriman.png"></img>
                             <p className=" self-center">Pilih Pengiriman</p>
                         </div>
                         <div className="flex gap-3">
-                        <img className=" w-fit" src=".\src\assets\catatan.png"></img>
+                        <img className=" w-fit" src="..\src\assets\catatan.png"></img>
                             <p className=" self-center">Catatan</p>
                         </div>
                     </div>
@@ -68,7 +86,7 @@ export default function ProductView() {
                             <p>+</p>
                         </div>
                         <div className="flex rounded-full h-10 w-2/3 border border-black bg-black text-white justify-center items-center gap-4">
-                            <img className=" w-fit" src=".\src\assets\cart.png"></img>
+                            <img className=" w-fit" src="..\src\assets\cart.png"></img>
                             <p>Add To Cart</p>
                         </div>
                     </div>
@@ -76,6 +94,9 @@ export default function ProductView() {
             </label>
             <div>
             <Product_deskripsi/>
+            </div>
+            <div>
+            <Review/>
             </div>
             <div>
             <Rekomendasi/>
