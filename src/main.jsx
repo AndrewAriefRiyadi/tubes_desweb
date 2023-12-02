@@ -13,7 +13,7 @@ const router = createBrowserRouter([
   {
     path: "/tops",
     element: <Tops/>
-  }
+  },
 ])
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
