@@ -1,7 +1,10 @@
+/* eslint-disable react/no-unknown-property */
 /* eslint-disable no-unused-vars */
 
 import React, { useState } from "react";
 import ListNavbar from "./ListNavbar";
+import { Link, Router } from "react-router-dom";
+
 
 const Navbar = () => {
   const [open, setOpen] = useState(false);
@@ -16,55 +19,53 @@ const Navbar = () => {
   };
   return (
     <>
-        <head>
-          <link
-            rel="stylesheet"
-            href="https://cdn-uicons.flaticon.com/2.0.0/uicons-solid-rounded/css/uicons-solid-rounded.css"
-          />
-          <link
-            rel="stylesheet"
-            href="https://cdn-uicons.flaticon.com/2.0.0/uicons-bold-rounded/css/uicons-bold-rounded.css"
-          ></link>
-        </head>
-        <nav className="bg-white border-gray-200 dark:bg-gray-900 border-b">
-          <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
-            <a
-              href="#"
-              className="flex items-center space-x-3 rtl:space-x-reverse"
+      <head>
+        <link
+          rel="stylesheet"
+          href="https://cdn-uicons.flaticon.com/2.0.0/uicons-solid-rounded/css/uicons-solid-rounded.css"
+        />
+        <link
+          rel="stylesheet"
+          href="https://cdn-uicons.flaticon.com/2.0.0/uicons-bold-rounded/css/uicons-bold-rounded.css"
+        ></link>
+      </head>
+      <nav className="bg-white border-gray-200 dark:bg-gray-900 border-b">
+        <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
+        <Link to={"/"}>
+          <a href="#" className="flex items-center space-x-3 rtl:space-x-reverse">
+            <img src="..\src\assets\logo.png"></img>
+          </a>
+        </Link>
+          
+          <div className="flex gap-6 items-center md:order-2 space-x-3 md:space-x-0 rtl:space-x-reverse">
+            <Link
+              type="button"
+              className="flex text-xl text-gray-800 dark:text-gray-200 hover:text-gray-600 dark:hover:text-gray-400 md:me-0"
+              id="search-button"
+              aria-expanded="false"
             >
-              <span className="self-center text-2xl font-bold whitespace-nowrap dark:text-white">
-                Desweb Logo
-              </span>
-            </a>
-            <div className="flex gap-6 items-center md:order-2 space-x-3 md:space-x-0 rtl:space-x-reverse">
-              <button
-                type="button"
-                className="flex text-xl text-gray-800 dark:text-gray-200 hover:text-gray-600 dark:hover:text-gray-400 md:me-0"
-                id="search-button"
-                aria-expanded="false"
-              >
-                <i className="fi fi-br-search"></i>
-              </button>
-              <button
-                type="button"
-                className="flex text-xl text-gray-800 dark:text-gray-200 hover:text-gray-600 dark:hover:text-gray-400 md:me-0"
-                id="cart-button"
-                aria-expanded="false"
-              >
-                <i className="fi fi-sr-shopping-cart"></i>
-              </button>
-              <button
-                type="button"
-                className="flex text-xl text-gray-800 dark:text-gray-200 hover:text-gray-600 dark:hover:text-gray-400 md:me-0"
-                id="user-menu-button"
-                aria-expanded="false"
-                data-dropdown-toggle="user-dropdown"
-                data-dropdown-placement="bottom"
-                onClick={toggleMenu}
-              >
-                <span className="sr-only">Open user menu</span>
-                <i className="fi fi-sr-user"></i>
-              </button>
+              <i className="fi fi-br-search"></i>
+            </Link>
+            <Link to={"/cart"}
+              type="button"
+              className="flex text-xl text-gray-800 dark:text-gray-200 hover:text-gray-600 dark:hover:text-gray-400 md:me-0"
+              id="cart-button"
+              aria-expanded="false"
+            >
+              <i className="fi fi-sr-shopping-cart" link></i>
+            </Link>
+            <Link
+              type="button"
+              className="flex text-xl text-gray-800 dark:text-gray-200 hover:text-gray-600 dark:hover:text-gray-400 md:me-0"
+              id="user-menu-button"
+              aria-expanded="false"
+              data-dropdown-toggle="user-dropdown"
+              data-dropdown-placement="bottom"
+              onClick={toggleMenu}
+            >
+              <span className="sr-only">Open user menu</span>
+              <i className="fi fi-sr-user"></i>
+            </Link>
 
               <div
                 className={`z-50 ${

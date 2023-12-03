@@ -4,7 +4,7 @@
 import { useState } from "react";
 
 const FormatPrice = (price) => {
-    const exchangeRate = 15433.75;
+    const exchangeRate = 15484.98;
   const userLanguage = navigator.language || navigator.userLanguage;
   const isUserInIndonesia = userLanguage.toLowerCase().startsWith("id");
   const currency = isUserInIndonesia ? "IDR" : "USD";
