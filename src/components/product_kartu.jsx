@@ -1,30 +1,30 @@
-// eslint-disable-next-line no-unused-vars
 import React from "react";
 import { Link } from "react-router-dom";
 
-export default function ProductKartu() {
-    return( 
-        <div className="flex flex-col gap-1 ">
-            <Link to={"/product"}>
-                <img
-                className="object-cover"
-                src="https://images.unsplash.com/photo-1600185365483-26d7a4cc7519?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8OHx8c25lYWtlcnxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60"
-                alt="product image"
-                />
+const ProductKartu = ({ product }) => {
+    const { id, nama, harga, image, image_small, kategori } = product;
+    console.log(id)
+    return (
+        <div className="flex flex-col gap-1">
+            <Link to={`/product/${id}`}>
+                <div className="flex justify-center">
+                    <img src={image_small} alt={nama} />
+                </div>
             </Link>
-            
-            <div class="flex justify-between">
-                <p>Produk</p>
-                <div class="flex gap-1">
-                    <p>S</p>
-                    <p>M</p>
-                    <p>L</p>
+            <div className="flex justify-between gap-4">
+                <p className=" text-sm">{nama}</p>
+                <div className="flex gap-1">
+                    <p className=" text-sm">S</p>
+                    <p className=" text-sm">M</p>
+                    <p className=" text-sm">L</p>
                 </div>
             </div>
-            <div class="flex justify-between text-xs">
-                <p>$10.00</p>
+            <div className="flex justify-between text-xs">
+                <p>${harga}</p>
                 <p>1 Terjual</p>
             </div>
         </div>
-    )
-}
+    );
+};
+
+export default ProductKartu;

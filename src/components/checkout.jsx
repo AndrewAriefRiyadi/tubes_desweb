@@ -10,7 +10,7 @@ export default function Checkout() {
         setInputValue(e.target.value);
     };
     return( 
-        <div className="flex flex-col  mt-16 gap-1 md:mx-10  mx-5 mb-16">
+        <div className="flex flex-col  mt-16 gap-1 md:mx-10 lg:mx-16 mx-5 mb-16  ">
             <p>Dashboard / Cart</p>
             <p className=" font-bold text-xl">Cart</p>
             <div className="flex max-md:flex-col gap-4">

@@ -32,19 +32,19 @@ const Navbar = () => {
         <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
         <Link to={"/"}>
           <a href="#" className="flex items-center space-x-3 rtl:space-x-reverse">
-            <img src=".\src\assets\logo.png"></img>
+            <img src="..\src\assets\logo.png"></img>
           </a>
         </Link>
           
           <div className="flex gap-6 items-center md:order-2 space-x-3 md:space-x-0 rtl:space-x-reverse">
-            <button
+            <Link
               type="button"
               className="flex text-xl text-gray-800 dark:text-gray-200 hover:text-gray-600 dark:hover:text-gray-400 md:me-0"
               id="search-button"
               aria-expanded="false"
             >
               <i className="fi fi-br-search"></i>
-            </button>
+            </Link>
             <Link to={"/cart"}
               type="button"
               className="flex text-xl text-gray-800 dark:text-gray-200 hover:text-gray-600 dark:hover:text-gray-400 md:me-0"
@@ -53,7 +53,7 @@ const Navbar = () => {
             >
               <i className="fi fi-sr-shopping-cart" link></i>
             </Link>
-            <button
+            <Link
               type="button"
               className="flex text-xl text-gray-800 dark:text-gray-200 hover:text-gray-600 dark:hover:text-gray-400 md:me-0"
               id="user-menu-button"
@@ -64,7 +64,7 @@ const Navbar = () => {
             >
               <span className="sr-only">Open user menu</span>
               <i className="fi fi-sr-user"></i>
-            </button>
+            </Link>
 
             <div
               className={`z-50 ${

@@ -4,15 +4,15 @@
 import Footer from "../components/Footer/Footer";
 import Navbar from "../components/Navbar/Navbar";
 import CatalogComp from "../components/catalogComp";
-import Checkout from "../components/checkout";
+import { useParams } from "react-router-dom";
 
 export default function CatalogPage() {
   // const [count, setCount] = useState(0)
-
+    const { category } = useParams();
     return (
         <>
         <Navbar />
-        <CatalogComp/>
+        <CatalogComp category={category}/>
         <Footer/>
         </>
     );

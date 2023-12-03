@@ -1,34 +1,31 @@
 // eslint-disable-next-line no-unused-vars
-import React from "react";
+import React, {useState} from "react";
 import Sidebar from "./sidebar";
 import Product_deskripsi from "./product_deskripsi";
 import Rekomendasi from "./rekomendasi";
 import Review from "./review";
+import data from "../data"
+import dataCart from "../data_cart"
+import { Link } from "react-router-dom";
 
-const data = [
-    {
-        nama: "Straight Low Jeans",
-        harga: "199.000",
-        image: "../src/assets/product_view.png",
-    },
-    {
-        nama: "Straight Cargo",
-        harga: "199.000",
-        image: "../src/assets/product_view.png",
-    },
-    {
-        nama: "Straight Jacket",
-        harga: "199.000",
-        image: "../src/assets/product_view.png",
-    },
-    {
-        nama: "Straight Low Jeans",
-        harga: "199.000",
-        image: "../src/assets/product_view.png",
-    },
-]
+
 
 export default function ProductView({productId}) {
+    const [cart, setCart] = useState(dataCart);
+    function addToCart(){
+        console.log("add to cart")
+        const newProduct = {
+            id: 4,
+            nama: "Straight Skinny Jeans",
+            harga: "199.000",
+            image: "../src/assets/product_view.png",
+            image_small: "../src/assets/product_small.png",
+            kategori: "bottoms",
+        };
+        setCart([...cart, newProduct]);
+        console.log(cart);
+    };
+
     return (
         <section class="flex flex-col md:flex-row h-full w-auto">
         <Sidebar />
@@ -85,7 +82,7 @@ export default function ProductView({productId}) {
                             <p>1</p>
                             <p>+</p>
                         </div>
-                        <div className="flex rounded-full h-10 w-2/3 border border-black bg-black text-white justify-center items-center gap-4">
+                        <div onClick={addToCart} className="flex rounded-full h-10 w-2/3 border border-black bg-black text-white justify-center items-center gap-4">
                             <img className=" w-fit" src="..\src\assets\cart.png"></img>
                             <p>Add To Cart</p>
                         </div>
@@ -104,7 +101,7 @@ export default function ProductView({productId}) {
             <div>
             <Rekomendasi/>
             </div>
-            <div className="flex rounded-full mt-4 h-10 w-full border border-black bg-black text-white justify-center items-center gap-4">
+            <div className="flex rounded-full mt-6 h-10 w-full border border-black bg-black text-white justify-center items-center gap-4">
                 <p>#</p>
                 <p>See More</p>
             </div>
