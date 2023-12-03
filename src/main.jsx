@@ -1,9 +1,9 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
 import Home from './pages/home.jsx'
-import Tops from './pages/tops.jsx'
 import {createBrowserRouter, RouterProvider} from "react-router-dom"
 import "./index.css";
+import Coba from './pages/coba.jsx'
 
 const router = createBrowserRouter([
   {
@@ -11,8 +11,8 @@ const router = createBrowserRouter([
     element: <Home/>
   },
   {
-    path: "/tops",
-    element: <Tops/>
+    path: "/coba",
+    element: <Coba/>
   },
 ])
 ReactDOM.createRoot(document.getElementById('root')).render(

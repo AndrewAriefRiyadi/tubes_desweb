@@ -1,7 +1,7 @@
 export default function Filter(){
     return (
       <>
-        <div className="w-[273px] h-[1529px] flex-col justify-start items-start gap-6 inline-flex">
+        <div className="w-[273px] h-[1529px] flex-col justify-start items-start gap-6 px-10 py-10 inline-flex">
           <div className="pb-8 border-b border-neutral-200 flex-col justify-start items-start gap-4 flex">
             <div className="w-[273px] justify-between items-end inline-flex">
               <div className="text-black text-base font-semibold font-['Poppins']">
@@ -38,7 +38,7 @@ export default function Filter(){
                 <div className="justify-start items-center gap-2 flex">
                   <div className="w-5 h-5 relative" />
                   <div className="text-black text-sm font-normal font-['Poppins']">
-                    Men
+                    Adult
                   </div>
                 </div>
                 <div className="text-black text-xs font-normal font-['Poppins']">
@@ -54,17 +54,6 @@ export default function Filter(){
                 </div>
                 <div className="text-black text-xs font-normal font-['Poppins']">
                   45
-                </div>
-              </div>
-              <div className="w-[273px] justify-between items-center inline-flex">
-                <div className="justify-start items-center gap-2 flex">
-                  <div className="w-5 h-5 relative" />
-                  <div className="text-black text-sm font-normal font-['Poppins']">
-                    Women
-                  </div>
-                </div>
-                <div className="text-black text-xs font-normal font-['Poppins']">
-                  102
                 </div>
               </div>
               <div className="w-[271px] justify-between items-center inline-flex">
@@ -92,28 +81,6 @@ export default function Filter(){
                 <div className="justify-start items-center gap-2 flex">
                   <div className="w-4 h-4 rounded-[3px] border border-neutral-200" />
                   <div className="text-black text-sm font-normal font-['Poppins']">
-                    Tees
-                  </div>
-                </div>
-                <div className="text-black text-xs font-normal font-['Poppins']">
-                  80
-                </div>
-              </div>
-              <div className="w-[271px] justify-between items-center inline-flex">
-                <div className="justify-start items-center gap-2 flex">
-                  <div className="w-4 h-4 rounded-[3px] border border-neutral-200" />
-                  <div className="text-black text-sm font-normal font-['Poppins']">
-                    Accessires
-                  </div>
-                </div>
-                <div className="text-black text-xs font-normal font-['Poppins']">
-                  68
-                </div>
-              </div>
-              <div className="w-[271px] justify-between items-center inline-flex">
-                <div className="justify-start items-center gap-2 flex">
-                  <div className="w-4 h-4 rounded-[3px] border border-neutral-200" />
-                  <div className="text-black text-sm font-normal font-['Poppins']">
                     Polos
                   </div>
                 </div>
@@ -130,17 +97,6 @@ export default function Filter(){
                 </div>
                 <div className="text-black text-xs font-normal font-['Poppins']">
                   12
-                </div>
-              </div>
-              <div className="w-[271px] justify-between items-center inline-flex">
-                <div className="justify-start items-center gap-2 flex">
-                  <div className="w-4 h-4 rounded-[3px] border border-neutral-200" />
-                  <div className="text-black text-sm font-normal font-['Poppins']">
-                    Pants
-                  </div>
-                </div>
-                <div className="text-black text-xs font-normal font-['Poppins']">
-                  32
                 </div>
               </div>
               <div className="w-[271px] justify-between items-center inline-flex">
@@ -216,22 +172,21 @@ export default function Filter(){
               <div className="text-black text-base font-semibold font-['Poppins']">
                 Size
               </div>
-              <div className="w-6 h-6 relative" />
             </div>
             <div className="w-[274px] justify-between items-center inline-flex">
-              <div className="px-4 py-2 border border-neutral-200 justify-center items-center flex">
+              <button className="px-4 py-2 border rounded-md border-neutral-200 justify-center items-center flex">
                 <div className="text-black text-sm font-normal font-['Poppins']">
-                  XXS
+                  S
                 </div>
-              </div>
+              </button>
               <div className="h-[37px] py-2 border border-neutral-200 justify-center items-center flex">
                 <div className="text-black text-sm font-normal font-['Poppins']">
-                  L
+                  M
                 </div>
               </div>
               <div className="h-[37px] pl-5 pr-[21px] py-2 border border-neutral-200 justify-center items-center flex">
                 <div className="text-black text-sm font-normal font-['Poppins']">
-                  XS
+                  L
                 </div>
               </div>
               <div className="h-[37px] py-2 border border-neutral-200 justify-center items-center flex">
@@ -241,22 +196,7 @@ export default function Filter(){
               </div>
               <div className="h-[37px] py-2 border border-neutral-200 justify-center items-center flex">
                 <div className="text-black text-sm font-normal font-['Poppins']">
-                  S
-                </div>
-              </div>
-              <div className="px-[17px] py-2 border border-violet-600 justify-center items-center flex">
-                <div className="text-black text-sm font-normal font-['Poppins']">
                   XXL
-                </div>
-              </div>
-              <div className="h-[37px] py-2 border border-neutral-200 justify-center items-center flex">
-                <div className="text-black text-sm font-normal font-['Poppins']">
-                  M
-                </div>
-              </div>
-              <div className="pl-3 pr-[13px] py-2 border border-neutral-200 justify-center items-center flex">
-                <div className="text-black text-sm font-normal font-['Poppins']">
-                  XXXL
                 </div>
               </div>
             </div>
