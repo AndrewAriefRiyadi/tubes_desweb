@@ -2,16 +2,16 @@
 
 import Footer from "../components/Footer/Footer";
 import Navbar from "../components/Navbar/Navbar";
-import Product_deskripsi from "../components/product_deskripsi";
 import ProductView from "../components/product_view";
+import { useParams } from "react-router";
 
 export default function Product() {
-  // const [count, setCount] = useState(0)
-
+    let params = useParams();
+    console.log(params.id); 
     return (
         <>
         <Navbar />
-        <ProductView />
+        <ProductView productId={params.id}/>
         <Footer />
         </>
     );

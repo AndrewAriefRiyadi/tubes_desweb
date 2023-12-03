@@ -1,7 +1,7 @@
 // eslint-disable-next-line no-unused-vars
 import React, { useState } from "react";
 
-const ProductFilter = ({ categories = [], onFilterChange }) => {
+export default function Filter({ categories = [], onFilterChange }){
   const [selectedCategory, setSelectedCategory] = useState("");
 
   const handleCategoryChange = (event) => {
@@ -91,5 +91,3 @@ const ProductFilter = ({ categories = [], onFilterChange }) => {
     </div>
   );
 };
-
-export default ProductFilter;

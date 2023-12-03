@@ -1,10 +1,10 @@
 // eslint-disable-next-line no-unused-vars
 import React from "react";
 
-export default function review() {
+export default function Review() {
   return (
     <div className="flex flex-col md:flex-row justify-between">
-      <div className="md:mr-8">
+      <div className="md:mr-8 md:w-2/3">
         <h1 className="text-1xl font-black mt-5 mb-7">PENILAIAN</h1>
         <h2 className="flex rounded-full h-10 w-[225px] border border-black bg-black text-white justify-center items-center gap-4 mb-5">
           Nilai Produk
@@ -184,7 +184,7 @@ export default function review() {
           </div>
         </div>
       </div>
-      <div className="flex flex-col md:w-1/3 md:h-1/3 bg-gray-100 rounded-lg p-4 mt-4 md:mt-[4.5rem]">
+      <div className="flex flex-col md:w-1/3 md:h-1/3 bg-gray-200 rounded-lg pr-4 pt-10 mt-4 md:mt-[4.5rem] justify-center">
         <div className="mb-4">
           <div className="text-5xl font-extrabold px-4 py-2 rounded-full">5.0</div>
           <div className="ml-4">dari 2 penilaian</div>
@@ -259,14 +259,14 @@ export default function review() {
           </div>
         </div>
         <div className="flex flex-col mt-2">
-          <div className="flex items-center gap-4">
+          <div className="flex justify-between items-center gap-4">
             <p className="text-black font-extrabold">5</p>
-            <div className="h-2 w-[20rem] bg-gray-600 rounded-full">
-              <div className="h-2 w-[20rem] bg-black rounded-full"></div>
+            <div className="h-2 w-full bg-gray-600 rounded-full">
+              <div className="h-2 w-full bg-black rounded-full"></div>
             </div>
             <p className="text-black font-extrabold">100%</p>
           </div>
-          <div className="flex items-center gap-4">
+          <div className="flex justify-between items-center gap-4">
             <p className="text-black font-extrabold">4</p>
             <div className="h-2 w-[20rem] bg-gray-200 rounded-full">
               <div className="h-2 w-[0rem] bg-black rounded-full"></div>

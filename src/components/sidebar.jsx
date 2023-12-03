@@ -6,17 +6,17 @@ export default function Sidebar() {
     return(
         
         <div className="md:w-2/12 items-center max-md:self-center gap-2 bg-white flex md:flex-col pt-4 md:p-4">
-            <Link to="#">
-                <h1 className="font-bold md:text-2xl">Kategori</h1>
+            <Link to="/catalog/tops">
+                <h1 className="font-bold md:text-2xl">Tops</h1>
             </Link>
-            <Link to="#">
-                <h1 className="font-bold md:text-2xl">Kategori</h1>
+            <Link to="/catalog/bottoms">
+                <h1 className="font-bold md:text-2xl">Bottoms</h1>
             </Link>
-            <Link to="#">
-                <h1 className="font-bold md:text-2xl">Kategori</h1>
+            <Link to="/catalog/shoes">
+                <h1 className="font-bold md:text-2xl">Shoes</h1>
             </Link>
-            <Link to="#">
-                <h1 className="font-bold md:text-2xl">Kategori</h1>
+            <Link to="/catalog/acc">
+                <h1 className="font-bold md:text-2xl">Accessories</h1>
             </Link>
         </div>
     );
