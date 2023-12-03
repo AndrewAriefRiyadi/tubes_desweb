@@ -1,10 +1,9 @@
 // eslint-disable-next-line no-unused-vars
 import React, { useState } from "react";
-import Cart_card from "./cart_card";
 import Cart_checkout from "./cart_checkout";
 import InputComponent from "./inputan";
 
-export default function Cart() {
+export default function Checkout() {
     const [inputValue, setInputValue] = useState('');
 
     const handleInputChange = (e) => {
