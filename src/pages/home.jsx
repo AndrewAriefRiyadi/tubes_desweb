@@ -5,6 +5,7 @@ import Footer from "../components/Footer/Footer";
 import Navbar from "../components/Navbar/Navbar";
 import CardProduct from "../components/ProductCard/ProductCard";
 import ProductKartu from "../components/product_kartu";
+import ProductFilter from "../components/filter";
 
 export default function Home() {
   // const [count, setCount] = useState(0)
