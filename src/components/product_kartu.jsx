@@ -20,7 +20,7 @@ const ProductKartu = ({ product }) => {
                 </div>
             </div>
             <div className="flex justify-between text-xs">
-                <p>${harga}</p>
+                <p>Rp {harga}</p>
                 <p>1 Terjual</p>
             </div>
         </div>
