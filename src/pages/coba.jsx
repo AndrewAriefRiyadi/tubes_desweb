@@ -1,18 +1,15 @@
-// import { useState } from 'react'
-
 import Footer from "../components/Footer/Footer";
 import Navbar from "../components/Navbar/Navbar";
-import Cart from "../components/cart";
+import Example from "../components/ProductCard/Product";
 import { LanguageProvider } from "../components/hooks/LanguageContext";
 
-export default function CartPage() {
-  // const [count, setCount] = useState(0)
-
+export default function Coba() {
   return (
     <>
       <LanguageProvider>
         <Navbar />
-        <Cart />
+        <Example />
+
         <Footer />
       </LanguageProvider>
     </>

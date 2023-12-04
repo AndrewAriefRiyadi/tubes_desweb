@@ -5,6 +5,7 @@ import Product from './pages/product.jsx'
 import Cart from './pages/cart.jsx'
 import {createBrowserRouter, RouterProvider} from "react-router-dom"
 import "./index.css";
+import Coba from './pages/coba.jsx'
 import CheckoutPage from './pages/checkout.jsx'
 import CatalogPage from './pages/catalog.jsx'
 
@@ -14,8 +15,12 @@ const router = createBrowserRouter([
     element: <Home/>
   },
   {
+    path: "/coba",
+    element: <Coba/>
+  },
+  {
     path: "/product/:id",
-    element: <Product/>,
+    element: <Product/>
   },  
   {
     path: "/cart",
