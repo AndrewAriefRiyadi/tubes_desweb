@@ -1,7 +1,7 @@
-// products.js
-const products = [
+
+const DataCart = [
     {
-        id: 0,
+        id: 1,
         nama: "Straight Low Jeans",
         harga: "199.000",
         image: "../src/assets/product_view.png",
@@ -10,4 +10,4 @@ const products = [
     },
 ];
 
-export default products;
+export default DataCart;

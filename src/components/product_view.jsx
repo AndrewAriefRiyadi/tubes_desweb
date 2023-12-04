@@ -5,25 +5,15 @@ import Product_deskripsi from "./product_deskripsi";
 import Rekomendasi from "./rekomendasi";
 import Review from "./review";
 import data from "../data"
-import dataCart from "../data_cart"
 import { Link } from "react-router-dom";
+import DataCart from "../data_cart";
 
 
 
 export default function ProductView({productId}) {
-    const [cart, setCart] = useState(dataCart);
     function addToCart(){
         console.log("add to cart")
-        const newProduct = {
-            id: 4,
-            nama: "Straight Skinny Jeans",
-            harga: "199.000",
-            image: "../src/assets/product_view.png",
-            image_small: "../src/assets/product_small.png",
-            kategori: "bottoms",
-        };
-        setCart([...cart, newProduct]);
-        console.log(cart);
+        DataCart.push(data[productId]);
     };
 
     return (
