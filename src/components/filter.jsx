@@ -1,93 +1,40 @@
-// eslint-disable-next-line no-unused-vars
+// filter.jsx
 import React, { useState } from "react";
 
-export default function Filter({ categories = [], onFilterChange }){
+const ProductFilter = ({ onFilterChange }) => {
   const [selectedCategory, setSelectedCategory] = useState("");
+  const [selectedSort, setSelectedSort] = useState("");
 
   const handleCategoryChange = (event) => {
     const category = event.target.value;
     setSelectedCategory(category);
-    onFilterChange(category);
+    onFilterChange({ category, sort: selectedSort });
+  };
+
+  const handleSortChange = (event) => {
+    const sort = event.target.value;
+    setSelectedSort(sort);
+    onFilterChange({ category: selectedCategory, sort });
   };
 
   return (
-    <div className="flex flex-col md:justify-between md:flex-row md:items-center bg-white mt-5 ml-5">
-      <div className="flex">
-        <h2 className="md:mr-2 md:text-xs">FILTER</h2>
-        <select
-          id="dateFilter"
-          name="dateFilter"
-          value={selectedCategory}
-          onChange={handleCategoryChange}
-          className="mb-2 md:mb-0 md:mr-2 text-xs font-bold"
-        >
-          <option value="">DATE</option>
-          {categories.map((category) => (
-            <option key={category} value={category}>
-              {category}
-            </option>
-          ))}
-        </select>
-        <select
-          id="smthngFilter1"
-          name="smthngFilter1"
-          value={selectedCategory}
-          onChange={handleCategoryChange}
-          className="mb-2 md:mb-0 md:mr-2 text-xs font-bold"
-        >
-          <option value="">SMTHNG</option>
-          {categories.map((category) => (
-            <option key={category} value={category}>
-              {category}
-            </option>
-          ))}
-        </select>
-        <select
-          id="smthngFilter2"
-          name="smthngFilter2"
-          value={selectedCategory}
-          onChange={handleCategoryChange}
-          className="mb-2 md:mb-0 md:mr-2 text-xs font-bold"
-        >
-          <option value="">SMTHNG</option>
-          {categories.map((category) => (
-            <option key={category} value={category}>
-              {category}
-            </option>
-          ))}
-        </select>
-        <select
-          id="smthngFilter3"
-          name="smthngFilter3"
-          value={selectedCategory}
-          onChange={handleCategoryChange}
-          className="mb-2 md:mb-0 md:mr-2 text-xs font-bold"
-        >
-          <option value="">SMTHNG</option>
-          {categories.map((category) => (
-            <option key={category} value={category}>
-              {category}
-            </option>
-          ))}
-        </select>
-      </div>
-      <div className="flex flex-col md:flex-row md:justify-end md:items-center bg-white">
-        <h2 className="mb-2 md:mb-0 md:mr-[10rem] md:text-xs">URUTKAN</h2>
-        <select
-          id="sortFilter"
-          name="sortFilter"
-          value={selectedCategory}
-          onChange={handleCategoryChange}
-          className="md:ml-2 text-xs font-bold"
-        >
-          <option value="">POPULARITAS</option>
-          {categories.map((category) => (
-            <option key={category} value={category}>
-              {category}
-            </option>
-          ))}
-        </select>
-      </div>
+    <div className="flex flex-col md:justify-start md:flex-row md:items-center bg-white my-5 md:mx-16 mx-4">
+      <h2 className="md:mb-0 md:mr-[4.4rem] md:text-xs">URUTKAN</h2>
+      <select
+        id="sortFilter"
+        name="sortFilter"
+        value={selectedSort}
+        onChange={handleSortChange}
+        className="md:ml-2 text-xs font-bold"
+      >
+        <option value="">POPULARITAS</option>
+        <option value="asc">HARGA TERENDAH</option>
+        <option value="desc">HARGA TERTINGGI</option>
+        <option value="az">A-Z</option>
+        <option value="za">Z-A</option>
+      </select>
     </div>
   );
 };
+
+export default ProductFilter;
